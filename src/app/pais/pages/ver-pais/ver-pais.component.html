@@ -1,0 +1,78 @@
+<div *ngIf="!country; else countryInfo" class="alert alert-info">
+   Espere...
+</div>
+
+<ng-template #countryInfo>
+   <div class="animate__animated animate__fadeIn">
+      <div class="row">
+         <div class="col-12">
+            <h3>País: <small>{{ country.name }}</small></h3>
+         </div>
+      </div>
+   
+      <hr>
+   
+      <div class="row">
+         <div class="col-4">
+            <h3>Bandera</h3>
+            <img class="img-thumbnail" [src]="country.flag" alt="country flag">
+         </div>
+   
+         <div class="col">
+            <h3>Información</h3>
+            <ul class="list-group">
+               <li class="list-group-item">
+                  <strong>Capital</strong> {{ country.capital}}
+               </li>
+               <li class="list-group-item">
+                  <strong>Población</strong> {{ country.population | number}}
+               </li>
+               <li class="list-group-item">
+                  <strong>Código numérico</strong> {{ country.numericCode }}
+               </li>
+               <li class="list-group-item">
+                  <strong>Código alpha3</strong> {{ country.alpha3Code }}
+               </li>
+            </ul>
+         </div>
+      </div>
+   
+      <h3 class="mt-4">Traducciones</h3>
+      <div class="row">
+         <div class="col">
+            <span class="badge bg-dark m-1">{{ country.translations.br }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.de }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.es }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.fa }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.fr }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.hr }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.it }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.ja }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.nl }}</span>
+            <span class="badge bg-dark m-1">{{ country.translations.pt }}</span>
+         </div>
+      </div>
+   
+      <h3 class="mt-4">Idiomas</h3>
+      <div class="row">
+         <div class="col">
+            <span *ngFor="let lang of country.languages" class="badge bg-primary m-1">
+               {{ lang.name }}
+            </span>
+         </div>
+      </div>
+   
+      <h3 class="mt-4">Monedas</h3>
+      <div class="row">
+         <div class="col">
+            <span *ngFor="let currency of country.currencies" class="badge bg-success m-1">
+               {{ currency.name }}
+            </span>
+         </div>
+      </div>
+   
+      <!-- <pre class="mt-5">
+         {{ country | json }}
+      </pre> -->
+   </div>
+</ng-template>
