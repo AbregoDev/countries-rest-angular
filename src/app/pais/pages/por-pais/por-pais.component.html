@@ -13,8 +13,8 @@
          <ul *ngIf="showSuggestions" class="list-group">
             <li *ngFor="let country of suggestedCountries"
                class="list-group-item list-group-item-action">
-               <a class="nav-link" [routerLink]="['/pais', country.alpha2Code]">
-                  {{ country.name }}
+               <a class="nav-link" [routerLink]="['/pais', country.cca2]">
+                  {{ country.name.common }}
                </a>
             </li>
             <li class="list-group-item list-group-item-action">

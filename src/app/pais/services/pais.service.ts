@@ -9,11 +9,11 @@ import { Country } from '../interfaces/pais.interface';
 })
 export class PaisService {
 
-   private _baseApi: string = 'https://restcountries.eu/rest/v2';
+   private _baseApi: string = 'https://restcountries.com/v3.1';
 
    get params() {
       return new HttpParams()
-         .set('fields', 'name;capital;alpha2Code;flag;population');
+         .set('fields', 'name,capital,cca2,flags,population');
    }
 
    constructor(private http: HttpClient) { }
@@ -21,8 +21,7 @@ export class PaisService {
    searchCountry(term: string): Observable<Country[]> {
       const url = `${this._baseApi}/name/${term}`;
 
-      return this.http.get<Country[]>(url, { params: this.params })
-         .pipe( tap(console.log) );
+      return this.http.get<Country[]>(url, { params: this.params });
    }
 
    searchCapital(term: string): Observable<Country[]> {
