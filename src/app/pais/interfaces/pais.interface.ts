@@ -25,14 +25,11 @@ export interface Name {
 }
 
 export interface Translations {
-    de: string;
-    es: string;
-    fr: string;
-    ja: string;
-    it: string;
-    br: string;
-    pt: string;
-    nl: string;
-    hr: string;
-    fa: string;
+    spa: any;
+    por: any;
+    fra: any;
+    ita: any;
+    deu: any;
+    jpn: any;
+    kor: any;
  }

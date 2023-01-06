@@ -40,24 +40,17 @@
       <h3 class="mt-4">Traducciones</h3>
       <div class="row">
          <div class="col">
-            <span class="badge badge-dark m-1">{{ country.translations.br }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.de }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.es }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.fa }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.fr }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.hr }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.it }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.ja }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.nl }}</span>
-            <span class="badge badge-dark m-1">{{ country.translations.pt }}</span>
+            <span *ngFor="let trans of country.translations | keyvalue" class="badge badge-dark m-1">
+                {{ trans.value.common }}
+            </span>
          </div>
       </div>
    
       <h3 class="mt-4">Idiomas</h3>
       <div class="row">
          <div class="col">
-            <span *ngFor="let lang of country.languages" class="badge badge-primary m-1">
-               {{ lang.name }}
+            <span *ngFor="let lang of country.languages | keyvalue" class="badge badge-primary m-1">
+               {{ lang.value }}
             </span>
          </div>
       </div>
@@ -65,8 +58,8 @@
       <h3 class="mt-4">Monedas</h3>
       <div class="row">
          <div class="col">
-            <span *ngFor="let currency of country.currencies" class="badge badge-success m-1">
-               {{ currency.name }}
+            <span *ngFor="let currency of country.currencies | keyvalue" class="badge badge-success m-1">
+               {{ currency.key }}
             </span>
          </div>
       </div>
