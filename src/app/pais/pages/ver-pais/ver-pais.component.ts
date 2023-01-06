@@ -5,29 +5,29 @@ import { switchMap, tap } from "rxjs/operators";
 import { Country } from '../../interfaces/pais.interface';
 
 @Component({
-   selector: 'app-ver-pais',
-   templateUrl: './ver-pais.component.html',
-   styles: [
-   ]
+    selector: 'app-ver-pais',
+    templateUrl: './ver-pais.component.html',
+    styles: [
+    ]
 })
 export class VerPaisComponent implements OnInit {
 
-   country!: Country;
+    country!: Country;
 
-   constructor(
-      private activatedRoute: ActivatedRoute,
-      private paisService: PaisService,
-   ) { }
+    constructor(
+        private activatedRoute: ActivatedRoute,
+        private paisService: PaisService,
+    ) { }
 
-   ngOnInit(): void {
-      this.activatedRoute.params
-         .pipe(
-            switchMap( ({id}) => this.paisService.searchCountryById(id)),
-            tap( console.log )
-         )
-         .subscribe( country => {
-            this.country = country;
-         });
-   }
+    ngOnInit(): void {
+        this.activatedRoute.params
+            .pipe(
+                switchMap(({ id }) => this.paisService.searchCountryById(id)),
+                tap(console.log)
+            )
+            .subscribe(country => {
+                this.country = country;
+            });
+    }
 
 }
