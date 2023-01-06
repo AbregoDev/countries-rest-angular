@@ -4,6 +4,7 @@ export interface Country {
     flags:        Flags;
     name:         Name;
     cca2:         string;
+    cca3:         string;
     capital:      string[];
     altSpellings: string[];
     population:   number;
