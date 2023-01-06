@@ -33,7 +33,7 @@ export class PaisService {
    searchCountryById(id: string): Observable<Country> {
       const params = new HttpParams()
          .set('fields',
-            'name,capital,alpha3Code,flags,population,numericCode,translations,languages,currencies');
+            'name,capital,cca2,cca3,flags,population,translations,languages,currencies');
 
       const url = `${this._baseApi}/alpha/${id}`;
 
