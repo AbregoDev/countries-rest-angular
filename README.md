@@ -1,27 +1,31 @@
-# Paises
+# Países App (Countries App)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+> **"El que lee mucho y anda mucho, ve mucho y sabe mucho"**
+>
+> *- Miguel de Cervantes*
 
-## Development server
+App build with Angular 13 and Bootstrap 4.6
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+See it in action on [Netlify](https://shimmering-empanada-ee5c67.netlify.app).
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Países App uses the [REST Countries API](https://restcountries.com) (v3.1) to fetch data from countries and display it. Every country shows information about its capital, population, alpha code, languages, currency, flag and more.
 
-## Build
+## Buscar país (*Search country*)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Search a country by its name
 
-## Running unit tests
+## Buscar región (*Search region*)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Show the list of all countries in a region
 
-## Running end-to-end tests
+## Buscar capital (*Search capital*)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Search a country by its capital name
 
-## Further help
+## Run this project locally
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng serve` for a dev server.
+
+Run `ng build` to compile.
