@@ -4,7 +4,7 @@
 >
 > *- Miguel de Cervantes*
 
-App build with Angular 13 and Bootstrap 4.6
+App built with Angular 13 and Bootstrap 4.6
 
 See it in action on [Netlify](https://shimmering-empanada-ee5c67.netlify.app).
 
